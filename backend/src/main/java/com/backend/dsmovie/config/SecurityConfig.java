@@ -1,5 +1,6 @@
 package com.backend.dsmovie.config;
 
+import lombok.AllArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
@@ -15,13 +16,9 @@ import java.util.Arrays;
 
 @Configuration
 @EnableWebSecurity
+@AllArgsConstructor
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-
     private final Environment env;
-
-    public SecurityConfig(final Environment  env) {
-        this.env = env;
-    }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
