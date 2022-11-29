@@ -22,4 +22,5 @@ public class Score {
     public void setUser(User user) {
         id.setUser(user);
     }
+
 }
